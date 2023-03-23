@@ -14,7 +14,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import logo from "../footypals-logo.svg";
+import logo from "../../../src/assets/footypals-logo.svg";
 
 const drawerWidth = 240;
 const navItems = ["Table", "Fixtures"];
@@ -30,14 +30,17 @@ function Navbar(props) {
   // ------------------ drawer = sidebar ----------------- //
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+      <Typography
+        variant="h6"
+        sx={{ my: 2, fontSize: "1.3rem", fontWeight: "600", color: "#467336" }}
+      >
         FootyPals
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemButton sx={{ textAlign: "center", fontWeightRegular: 500, fontSize: "1.05rem" }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -59,7 +62,7 @@ function Navbar(props) {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
+              sx={{ mr: 10, display: { sm: "none" } }}
             >
               <MenuIcon />
             </IconButton>
@@ -74,13 +77,16 @@ function Navbar(props) {
               }}
             >
               <img src={logo} alt="Footy-Pals-Logo" height="auto" width="50" />
-              <Typography sx={{ fontWeight: 600, fontSize: 17, ml: 2, color: "#467336" }}>
+              <Typography sx={{ fontWeight: 600, fontSize: 18, ml: 2, color: "#467336" }}>
                 Footy Pals
               </Typography>
             </Box>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: "#000" }}>
+                <Button
+                  key={item}
+                  sx={{ color: "#000", fontSize: "1.05rem", textTransform: "none" }}
+                >
                   {item}
                 </Button>
               ))}

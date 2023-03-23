@@ -1,12 +1,12 @@
 import "./App.css";
-import Navbar from "./components/navbar/navbar";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Home from "./components/pages/home/home";
 
 
 // To override the default styling use below
 const theme = createTheme({
   typography: {
-    fontFamily: ["Lato", "sans-serif"].join(","),
+    fontFamily: ["Jost", "sans-serif"].join(","),
     fontWeightLight: "300",
     fontWeightRegular: "400",
     fontWeightBold: "500",
@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Navbar />
+        <Home />
       </ThemeProvider>
     </>
   );
