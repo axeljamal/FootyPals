@@ -1,7 +1,6 @@
 import "./App.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Home from "./components/pages/Home/Home";
-
+import Home from "./components/pages/home/home";
 
 // To override the default styling use below
 const theme = createTheme({
