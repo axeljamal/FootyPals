@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -17,7 +17,7 @@ import Container from "@mui/material/Container";
 import logo from "../../../src/assets/footypals-logo.svg";
 
 const drawerWidth = 240;
-const navItems = ["Table", "Fixtures"];
+const navItems = ["PL Table", "Fixtures"];
 
 function Navbar(props) {
   const { window } = props;
@@ -32,7 +32,7 @@ function Navbar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography
         variant="h6"
-        sx={{ my: 2, fontSize: "1.3rem", fontWeight: "600", color: "#467336" }}
+        sx={{ my: 2, fontSize: "1.4rem", fontWeight: "600", color: "#467336" }}
       >
         FootyPals
       </Typography>
@@ -40,8 +40,8 @@ function Navbar(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center", fontWeightRegular: 500, fontSize: "1.05rem" }}>
-              <ListItemText primary={item} />
+            <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemText primary={item} primaryTypographyProps={{ sx: { fontWeight: "500" } }} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -62,15 +62,16 @@ function Navbar(props) {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 10, display: { sm: "none" } }}
+              sx={{ display: { sm: "none" } }}
             >
               <MenuIcon />
             </IconButton>
-            {/* ----------- Footy pals logo below ----------- */}
+            {/* ----------- Footy Pals Logo below ----------- */}
             <Box
               sx={{
                 display: "flex",
                 alignItems: "center",
+                justifyContent: { xs: "center", sm: "left" },
                 flexGrow: 1,
                 textAlign: { xs: "center", sm: "left" },
                 my: 2,
@@ -85,7 +86,29 @@ function Navbar(props) {
               {navItems.map((item) => (
                 <Button
                   key={item}
-                  sx={{ color: "#000", fontSize: "1.05rem", textTransform: "none" }}
+                  sx={{
+                    px: "1rem",
+                    mr: "10px",
+                    fontSize: "1.01rem",
+                    textTransform: "none",
+                    color: "#FAFAFA",
+                    borderRadius: "10px",
+                    border: "2px solid #2b2d42",
+                    background: "#467336",
+                    boxShadow: "3px 3px #2b2d42",
+                    cursor: "pointer",
+                    transition: "transform 0.2s ease-in-out",
+                    "&:hover": {
+                      background: "#ffc300",
+                      color: "#252525",
+                      transition: "transform 0.2s ease-in-out",
+                    },
+                    "&:active": {
+                      boxShadow: "none",
+                      transform: "translate(3px, 3px)",
+                      transition: "transform 0.2s ease-in-out",
+                    },
+                  }}
                 >
                   {item}
                 </Button>
