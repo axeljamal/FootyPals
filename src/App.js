@@ -1,6 +1,6 @@
 import "./App.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Home from "./components/pages/home/home";
+import Home from "./components/pages/Home/Home";
 
 
 // To override the default styling use below
@@ -16,6 +16,9 @@ const theme = createTheme({
     primary: {
       main: "#fff",
     },
+    // myBtn: {
+    //   main: "#DDB61A",
+    // },
   },
 });
 
