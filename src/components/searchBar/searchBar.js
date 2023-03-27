@@ -1,6 +1,6 @@
-import React from 'react';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
+import React from "react";
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
 
 export default function SearchBar() {
   return (
@@ -16,23 +16,23 @@ export default function SearchBar() {
 
 const footBallTeams = [
   { label: "Arsenal" },
+  { label: "Aston Villa" },
+  { label: "Bournemouth" },
+  { label: "Brentford" },
+  { label: "Brighton" },
   { label: "Chelsea" },
+  { label: "Crystal Palace" },
+  { label: "Everton" },
+  { label: "Fulham" },
+  { label: "Leeds" },
+  { label: "Leicester" },
+  { label: "Liverpool" },
   { label: "Man City" },
   { label: "Man United" },
-  { label: "Tottenham" },
   { label: "Newcastle" },
-  { label: "Liverpool" },
-  { label: "Brighton" },
-  { label: "Brentford" },
-  { label: "Fulham" },
-  { label: "Aston Villa" },
-  { label: "Crystal Palace" },
-  { label: "Wolves" },
-  { label: "Leeds" },
-  { label: "Everton" },
   { label: "Nottingham Forest" },
-  { label: "Leicester" },
-  { label: "West Ham" },
-  { label: "Bournemouth" },
   { label: "Southampton" },
+  { label: "Tottenham" },
+  { label: "West Ham" },
+  { label: "Wolves" },
 ];
