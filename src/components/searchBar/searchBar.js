@@ -15,8 +15,24 @@ export default function SearchBar() {
 }
 
 const footBallTeams = [
-  { label: 'Arsenal' },
-  { label: 'Chelsea' },
-  { label: 'Man City' },
-  { label: 'Man United' },
+  { label: "Arsenal" },
+  { label: "Chelsea" },
+  { label: "Man City" },
+  { label: "Man United" },
+  { label: "Tottenham" },
+  { label: "Newcastle" },
+  { label: "Liverpool" },
+  { label: "Brighton" },
+  { label: "Brentford" },
+  { label: "Fulham" },
+  { label: "Aston Villa" },
+  { label: "Crystal Palace" },
+  { label: "Wolves" },
+  { label: "Leeds" },
+  { label: "Everton" },
+  { label: "Nottingham Forest" },
+  { label: "Leicester" },
+  { label: "West Ham" },
+  { label: "Bournemouth" },
+  { label: "Southampton" },
 ];
