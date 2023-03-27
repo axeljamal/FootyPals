@@ -1,22 +1,24 @@
-import React from "react";
-import Typography from "@mui/material/Typography";
-import Navbar from "../../navbar/navbar";
-import { Box } from "@mui/material";
-import backgroundImage from "../../../assets/bgImage.jpg";
-import TeamsButtons from "../../TeamsButtons/TeamsButtons";
-import DynamicTable from "../../table/table";
+import React from 'react';
+import Typography from '@mui/material/Typography';
+import Navbar from '../../navbar/navbar';
+import { Box } from '@mui/material';
+import backgroundImage from '../../../assets/bgImage.jpg';
+import TeamsButtons from '../../TeamsButtons/TeamsButtons';
+import DynamicTable from '../../table/table';
 
 const Home = () => {
   return (
     <>
       <Navbar />
       <TeamsButtons />
-      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <Typography variant="h3" sx={{ fontWeight: "500" }}>
+      <Box
+        sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+      >
+        <Typography variant="h3" sx={{ fontWeight: '500' }}>
           Stay up-to-date with everything <br></br> Premier League in one place.
         </Typography>
       </Box>
-
+      <searchBar />
       <style>
         {`
           body {
