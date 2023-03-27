@@ -19,8 +19,6 @@ const Home = () => {
         </Typography>
       </Box>
       <searchBar />
-      <DynamicTable />
-
       <style>
         {`
           body {
