@@ -1,6 +1,9 @@
 import "./App.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Home from "./components/pages/home/home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DynamicTable from "./components/table/table";
+import Fixture from "./components/fixture/fixture"
 
 // To override the default styling use below
 const theme = createTheme({
@@ -25,7 +28,13 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Home />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/table" element={<DynamicTable />} />
+            <Route path="/fixture" element={<Fixture />} />
+          </Routes>
+        </BrowserRouter>
       </ThemeProvider>
     </>
   );
