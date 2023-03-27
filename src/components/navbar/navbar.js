@@ -15,9 +15,37 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import logo from "../../../src/assets/footypals-logo.svg";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
-const navItems = ["PL Table", "Fixtures"];
+const navItems = [
+  { label: "PL Table", path: "/table" },
+  { label: "Fixtures", path: "/fixture" },
+];
+
+const buttonStyles = {
+  px: "1rem",
+  mr: "10px",
+  fontSize: "1.01rem",
+  textTransform: "none",
+  color: "#FAFAFA",
+  borderRadius: "10px",
+  border: "2px solid #2b2d42",
+  background: "#467336",
+  boxShadow: "3px 3px #2b2d42",
+  cursor: "pointer",
+  transition: "transform 0.2s ease-in-out",
+  "&:hover": {
+    background: "#ffc300",
+    color: "#252525",
+    transition: "transform 0.2s ease-in-out",
+  },
+  "&:active": {
+    boxShadow: "none",
+    transform: "translate(3px, 3px)",
+    transition: "transform 0.2s ease-in-out",
+  },
+};
 
 function Navbar(props) {
   const { window } = props;
@@ -39,9 +67,14 @@ function Navbar(props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.label} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} primaryTypographyProps={{ sx: { fontWeight: "500" } }} />
+              <Link to={item.path} style={{ textDecoration: "none", color: "inherit" }}>
+                <ListItemText
+                  primary={item.label}
+                  primaryTypographyProps={{ sx: { fontWeight: "500", textAlign: "center" } }}
+                />
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -79,40 +112,16 @@ function Navbar(props) {
             >
               <img src={logo} alt="Footy-Pals-Logo" height="auto" width="50" />
               <Typography sx={{ fontWeight: 600, fontSize: 18, ml: 2, color: "#467336" }}>
-                Footy Pals
+                <Link to="/">Footy Pals</Link>
               </Typography>
             </Box>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item) => (
-                <Button
-                  key={item}
-                  sx={{
-                    px: "1rem",
-                    mr: "10px",
-                    fontSize: "1.01rem",
-                    textTransform: "none",
-                    color: "#FAFAFA",
-                    borderRadius: "10px",
-                    border: "2px solid #2b2d42",
-                    background: "#467336",
-                    boxShadow: "3px 3px #2b2d42",
-                    cursor: "pointer",
-                    transition: "transform 0.2s ease-in-out",
-                    "&:hover": {
-                      background: "#ffc300",
-                      color: "#252525",
-                      transition: "transform 0.2s ease-in-out",
-                    },
-                    "&:active": {
-                      boxShadow: "none",
-                      transform: "translate(3px, 3px)",
-                      transition: "transform 0.2s ease-in-out",
-                    },
-                  }}
-                >
-                  {item}
-                </Button>
-              ))}
+              <Link to="/table">
+                <Button sx={buttonStyles}>PL Table</Button>
+              </Link>
+              <Link to="/fixture">
+                <Button sx={buttonStyles}>Fixtures</Button>
+              </Link>
             </Box>
           </Toolbar>
         </Container>
