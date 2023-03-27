@@ -4,7 +4,7 @@ import Navbar from '../../navbar/navbar';
 import { Box } from '@mui/material';
 import backgroundImage from '../../../assets/bgImage.jpg';
 import TeamsButtons from '../../TeamsButtons/TeamsButtons';
-import DynamicTable from '../../table/table';
+import SearchBar from '../../searchBar/searchBar'
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
           Stay up-to-date with everything <br></br> Premier League in one place.
         </Typography>
       </Box>
-      <searchBar />
+      <SearchBar />
       <style>
         {`
           body {
