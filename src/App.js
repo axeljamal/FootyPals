@@ -29,6 +29,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
+        <Navbar />
         <BrowserRouter>
           <Navbar />
           <Routes>
