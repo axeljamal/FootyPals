@@ -1,6 +1,7 @@
 import './App.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Home from './components/pages/home/home';
+import Team from "./components/pages/team/team";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import DynamicTable from './components/table/table';
 import Fixture from './components/fixture/fixture';
