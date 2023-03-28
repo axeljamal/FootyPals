@@ -26,6 +26,7 @@ const navItems = [
 const buttonStyles = {
   px: "1rem",
   mr: "10px",
+  textDecoration: "none",
   fontSize: "1.01rem",
   textTransform: "none",
   color: "#FAFAFA",
@@ -111,15 +112,25 @@ function Navbar(props) {
               }}
             >
               <img src={logo} alt="Footy-Pals-Logo" height="auto" width="50" />
-              <Typography sx={{ fontWeight: 600, fontSize: 18, ml: 2, color: "#467336" }}>
-                <Link to="/">Footy Pals</Link>
+              <Typography
+                sx={{
+                  fontWeight: 600,
+                  fontSize: 18,
+                  ml: 2,
+                  // color: "#467336",
+                  textDecoration: "none",
+                }}
+              >
+                <Link to="/" style={{ textDecoration: "none", color: "#467336" }}>
+                  Footy Pals
+                </Link>
               </Typography>
             </Box>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              <Link to="/table">
+              <Link to="/table" style={{ textDecoration: "none" }}>
                 <Button sx={buttonStyles}>PL Table</Button>
               </Link>
-              <Link to="/fixture">
+              <Link to="/fixture" style={{ textDecoration: "none" }}>
                 <Button sx={buttonStyles}>Fixtures</Button>
               </Link>
             </Box>
