@@ -1,23 +1,24 @@
-import "./App.css";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Home from "./components/pages/home/home";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import DynamicTable from "./components/table/table";
-import Fixture from "./components/fixture/fixture";
-import Navbar from "./components/navbar/navbar";
+import './App.css';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Home from './components/pages/home/home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import DynamicTable from './components/table/table';
+import Fixture from './components/fixture/fixture';
+import Navbar from './components/navbar/navbar';
+import Footer from './components/footer/footer';
 
 // To override the default styling use below
 const theme = createTheme({
   typography: {
-    fontFamily: ["Jost", "sans-serif"].join(","),
-    fontWeightLight: "300",
-    fontWeightRegular: "400",
-    fontWeightBold: "500",
+    fontFamily: ['Jost', 'sans-serif'].join(','),
+    fontWeightLight: '300',
+    fontWeightRegular: '400',
+    fontWeightBold: '500',
   },
   palette: {
-    mode: "light",
+    mode: 'light',
     primary: {
-      main: "#fff",
+      main: '#fff',
     },
     // myBtn: {
     //   main: "#DDB61A",
@@ -36,6 +37,7 @@ function App() {
             <Route path="/table" element={<DynamicTable />} />
             <Route path="/fixture" element={<Fixture />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </ThemeProvider>
     </>
