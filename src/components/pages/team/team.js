@@ -4,8 +4,7 @@ import { Box } from "@mui/material";
 import backgroundImage from "../../../assets/bgImage.jpg";
 import TeamsButtons from "../../TeamsButtons/TeamsButtons";
 import SearchBar from "../../searchBar/searchBar";
-// import Bio from "../../bio/bio";
-// import Squad from "../../squad/squad";
+import Squad from "../../squads/squads";
 
 const Team = () => {
   return (
@@ -19,8 +18,7 @@ const Team = () => {
         </Typography>
       </Box>
       <SearchBar />
-      {/* <Bio />
-      <Squad /> */}
+      <Squad  />
 
       <style>
         {`
