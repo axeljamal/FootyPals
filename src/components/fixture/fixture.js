@@ -34,9 +34,6 @@ export default function Fixture() {
       });
   }, []);
 
-  const tableStyle = {
-    borderSpacing: "0px 4px",
-  };
 
   const PlTableStyles = {
     fontWeight: "500",
@@ -48,6 +45,18 @@ export default function Fixture() {
     margin: "20px 0px 100px 0px",
   };
 
+  const dateStyle = {
+    borderBottom: "none",
+    paddingBottom: 0,
+    fontWeight: "600",
+  };
+  
+  const timeStyle = {
+    paddingTop: 0,
+    fontWeight: "600",
+  };
+  
+ 
   return (
     <Container>
       {/* ------------------ header ------------------ */}
@@ -60,26 +69,38 @@ export default function Fixture() {
         <Table aria-label="simple table" stickyHeader>
           <TableBody>
             {data.map((item) => (
-              <TableRow key={item.teams.id} sx={{ tableStyle }}>
-                <TableCell align="right">{item.teams.home.name}</TableCell>
-                <TableCell align="left">
-                  <img src={item.teams.home.logo} width={36} alt="logo" />{" "}
-                </TableCell>
-                <TableCell align="center">
-                  {new Date(item.fixture.date).toLocaleString("en-GB", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                    hour: "numeric",
-                    minute: "numeric",
-                    hour12: false,
-                  })}
-                </TableCell>
-                <TableCell align="right">
-                  <img src={item.teams.away.logo} width={30} alt="logo" />{" "}
-                </TableCell>
-                <TableCell align="left">{item.teams.away.name}</TableCell>
-              </TableRow>
+              <React.Fragment key={item.teams.id}>
+                <TableRow>
+                  <TableCell colSpan={6} align="center" sx={dateStyle}>
+                    {new Date(item.fixture.date).toLocaleString("en-GB", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell align="right" sx={{ fontSize: "1rem" }}>
+                    {item.teams.home.name}
+                  </TableCell>
+                  <TableCell align="left">
+                    <img src={item.teams.home.logo} width={36} alt="logo" />{" "}
+                  </TableCell>
+                  <TableCell align="center" sx={timeStyle}>
+                    {new Date(item.fixture.date).toLocaleString("en-GB", {
+                      hour: "numeric",
+                      minute: "numeric",
+                      hour12: false,
+                    })}
+                  </TableCell>
+                  <TableCell align="right">
+                    <img src={item.teams.away.logo} width={30} alt="logo" />{" "}
+                  </TableCell>
+                  <TableCell align="left" sx={{ fontSize: "1rem" }}>
+                    {item.teams.away.name}
+                  </TableCell>
+                </TableRow>
+              </React.Fragment>
             ))}
           </TableBody>
         </Table>
@@ -87,4 +108,3 @@ export default function Fixture() {
     </Container>
   );
 }
-
