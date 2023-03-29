@@ -3,7 +3,6 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
-import { Stack } from "@mui/material";
 
 const contributors = [
   { name: "Lee Dillon", link: "https://github.com/LeeDillon" },

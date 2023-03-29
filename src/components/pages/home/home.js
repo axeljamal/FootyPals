@@ -47,14 +47,14 @@ const Home = () => {
           width: "60",
         }}
       >
-        <img src={logo} alt="Footy-Pals-Logo" height="auto" width="100rem" />
+        <img src={logo} alt="Footy-Pals-Logo" height="auto" width="120" />
       </Box>
 
       <Box
         style={{
           position: "absolute",
           left: "50%",
-          top: "50%",
+          top: "40%",
           transform: "translate(-50%, -50%)",
           marginTop: "4.5rem",
         }}

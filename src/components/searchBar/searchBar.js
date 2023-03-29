@@ -6,6 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Squads from "../squads/squads";
 import { useRef } from "react";
+import { Paper } from "@mui/material";
 
 export default function BasicSelect() {
   const [team, setTeam] = React.useState("");
@@ -17,13 +18,16 @@ export default function BasicSelect() {
   };
 
   return (
-    <div>
+    <Paper elevation={24}>
       <Box sx={{ Width: 60 }}>
         <FormControl sx={{ bgcolor: "white", borderRadius: "5px" }} fullWidth>
           <InputLabel sx={{ fontColor: "dark" }} id="demo-simple-select-label">
             Select your team
           </InputLabel>
           <Select
+            sx={{
+              width: "420px",
+            }}
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={team}
@@ -54,6 +58,6 @@ export default function BasicSelect() {
         </FormControl>
       </Box>
       <div>{notInitialRender.current ? <Squads team={team} /> : null}</div>
-    </div>
+    </Paper>
   );
 }
