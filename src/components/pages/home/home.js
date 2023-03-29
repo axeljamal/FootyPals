@@ -10,7 +10,13 @@ const Home = () => {
       <Box
         sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       >
-        <Typography variant="h3" sx={{ fontWeight: "500" }}>
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: "500",
+            fontSize: { xs: "1.3rem", md: "3rem", lg: "3rem" },
+          }}
+        >
           Stay up-to-date with everything <br></br> Premier League in one place.
         </Typography>
       </Box>

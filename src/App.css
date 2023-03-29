@@ -11,16 +11,12 @@
   padding-right: 200px !important;
 }
 
-.css-11xur9t-MuiPaper-root-MuiTableContainer-root {
-  overflow-y: scroll;
-  max-height: 50vh;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 .App-header {
   background-color: #282c34;
