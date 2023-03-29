@@ -35,6 +35,11 @@ export default function Footer() {
             mb: 0.1,
           }}
         >
+          <Typography variant="caption" color="initial"></Typography>
+          <a href="https://github.com/LeeDillon">Lee Dillon</a>
+          <a href="https://github.com/Murtaza34"> Murtaza Mohebi</a>
+          <a href="https://github.com/axeljamal"> Axel Jamal</a>
+          <a href="https://github.com/HelderBalbino"> Helder Balbino</a>
           <Typography variant="caption" color="initial">
             Copyright ©2023.
           </Typography>
