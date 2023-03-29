@@ -12,7 +12,9 @@ const Home = () => {
           Stay up-to-date with everything <br></br> Premier League in one place.
         </Typography>
       </Box>
-      <SearchBar sx={{ display: "flex", alignItems: "center", justifyContent: "center" }} />
+      <SearchBar
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+      />
       <style>
         {`
           body {
