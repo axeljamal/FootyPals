@@ -43,7 +43,7 @@ const Squads = (props) => {
             <TableCell>Number</TableCell>
             <TableCell>Name</TableCell>
             <TableCell>Position</TableCell>
-            <TableCell>Age</TableCell>
+            {/* <TableCell>Age</TableCell> */}
           </TableRow>
         </TableHead>
         <TableBody>
@@ -55,7 +55,7 @@ const Squads = (props) => {
               <TableCell align="left">{item.number}</TableCell>
               <TableCell align="left">{item.name}</TableCell>
               <TableCell align="left">{item.position}</TableCell>
-              <TableCell align="left">{item.age}</TableCell>
+              {/* <TableCell align="left">{item.age}</TableCell> */}
             </TableRow>
           ))}
         </TableBody>
