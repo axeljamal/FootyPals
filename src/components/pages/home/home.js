@@ -1,23 +1,33 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
+<<<<<<< HEAD
 // import Navbar from '../../navbar/navbar';
 import { Box } from "@mui/material";
 import backgroundImage from "../../../assets/bgImage.jpg";
 import TeamsButtons from "../../TeamsButtons/TeamsButtons";
+=======
+import { Box } from "@mui/material";
+import backgroundImage from "../../../assets/bgImage.jpg";
+>>>>>>> main
 import SearchBar from "../../searchBar/searchBar";
 
 const Home = () => {
   return (
     <>
+<<<<<<< HEAD
       {/* <Navbar /> */}
       <TeamsButtons />
       <Box
         sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       >
+=======
+      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+>>>>>>> main
         <Typography variant="h3" sx={{ fontWeight: "500" }}>
           Stay up-to-date with everything <br></br> Premier League in one place.
         </Typography>
       </Box>
+<<<<<<< HEAD
 
       <Box
         style={{
@@ -30,6 +40,11 @@ const Home = () => {
         <SearchBar />
       </Box>
 
+=======
+      <SearchBar
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+      />
+>>>>>>> main
       <style>
         {`
           body {

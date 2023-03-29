@@ -5,15 +5,11 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { Container, Typography, Box } from "@mui/material";
+import Relegation from "../relegation/relegation";
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
-// function createData(name, played, win, draw, lose, goalsDiff, points) {
-//   return { name, played, win, draw, lose, goalsDiff, points };
-// }
-
-// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
 export default function DynamicTable() {
   const [data, setData] = useState([]);
@@ -40,38 +36,77 @@ export default function DynamicTable() {
       });
   }, []);
 
+  const containerStyles = {
+    margin: "20px 0px 100px 0px",
+  };
+
+  const PlTableStyles = {
+    fontWeight: "500",
+    color: "#22577a",
+    padding: 5,
+  };
+
   return (
-    <TableContainer component={Paper}>
-      <Table aria-label="simple table" stickyHeader>
-        <TableHead>
-          <TableRow>
-            <TableCell></TableCell>
-            <TableCell>Team</TableCell>
-            <TableCell>P</TableCell>
-            <TableCell>W</TableCell>
-            <TableCell>D</TableCell>
-            <TableCell>L</TableCell>
-            <TableCell>GD</TableCell>
-            <TableCell>Pts</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data.map((item) => (
-            <TableRow key={item.team.id}>
-              <TableCell align="left">
-                <img src={item.team.logo} width={30} alt="logo" />{" "}
-              </TableCell>
-              <TableCell align="left">{item.team.name}</TableCell>
-              <TableCell align="left">{item.all.played}</TableCell>
-              <TableCell align="left">{item.all.win}</TableCell>
-              <TableCell align="left">{item.all.draw}</TableCell>
-              <TableCell align="left">{item.all.lose}</TableCell>
-              <TableCell align="left">{item.goalsDiff}</TableCell>
-              <TableCell align="left">{item.points}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <>
+      <Container>
+        {/* ------------------ header ------------------ */}
+        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <Typography variant="h5" sx={PlTableStyles}>
+            Premier League Table
+          </Typography>
+        </Box>
+        <Relegation />
+        <TableContainer component={Paper} sx={containerStyles}>
+          <Table aria-label="simple table" stickyHeader>
+            <TableHead>
+              <TableRow sx={{ fontWeight: "600" }}>
+                <TableCell></TableCell>
+                <TableCell>Team</TableCell>
+                <TableCell sx={{ paddingLeft: 0 }}>P</TableCell>
+                <TableCell sx={{ paddingLeft: 0 }}>W</TableCell>
+                <TableCell sx={{ paddingLeft: 0 }}>D</TableCell>
+                <TableCell sx={{ paddingLeft: 0 }}>L</TableCell>
+                <TableCell sx={{ paddingLeft: 0 }}>GD</TableCell>
+                <TableCell sx={{ paddingLeft: 0 }}>Pts</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {data.map((item) => (
+                <TableRow key={item.team.id}>
+                  <TableCell align="center">
+                    <img src={item.team.logo} width={30} alt="logo" />{" "}
+                  </TableCell>
+                  <TableCell align="left">{item.team.name}</TableCell>
+                  <TableCell align="left" sx={{ paddingLeft: 0 }}>
+                    {item.all.played}
+                  </TableCell>
+                  <TableCell align="left" sx={{ paddingLeft: 0 }}>
+                    {item.all.win}
+                  </TableCell>
+                  <TableCell align="left" sx={{ paddingLeft: 0 }}>
+                    {item.all.draw}
+                  </TableCell>
+                  <TableCell align="left" sx={{ paddingLeft: 0 }}>
+                    {item.all.lose}
+                  </TableCell>
+                  <TableCell align="left" sx={{ paddingLeft: 0 }}>
+                    {item.goalsDiff}
+                  </TableCell>
+                  <TableCell align="left" sx={{ paddingLeft: 0 }}>
+                    {item.points}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Container>
+      <style>
+        {`
+          body {
+            background-color: "#"
+        `}
+      </style>
+    </>
   );
 }
