@@ -8,16 +8,34 @@ const Home = () => {
   return (
     <>
       <Box
-        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          flexWrap: "wrap",
+          marginTop: "5rem",
+        }}
       >
         <Typography
           variant="h3"
           sx={{
             fontWeight: "500",
-            fontSize: { xs: "1.3rem", md: "3rem", lg: "3rem" },
+            fontSize: { xs: "1.5rem", md: "3rem", lg: "3.5rem" },
+            color: "grey",
           }}
         >
-          Stay up-to-date with everything <br></br> Premier League in one place.
+          Stay up-to-date with everything
+        </Typography>
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: "500",
+            fontSize: { xs: "1.5rem", md: "3rem", lg: "3.5rem" },
+            color: "grey",
+          }}
+        >
+          Premier League in one place
         </Typography>
       </Box>
 
