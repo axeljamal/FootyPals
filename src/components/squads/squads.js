@@ -24,7 +24,7 @@ const Squads = (props) => {
       .catch(function (error) {
         console.error(error);
       });
-  }, []);
+  }, [props.team]);
 
   return <div>squads{props.team}, </div>;
 };
