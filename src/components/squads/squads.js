@@ -49,7 +49,7 @@ const Squads = (props) => {
         <TableBody>
           {data.map((item) => (
             <TableRow key={item.id}>
-              <TableCell align="left">
+              <TableCell align="left" >
                 <img src={item.photo} width={30} alt="logo" />{" "}
               </TableCell>
               <TableCell align="left">{item.number}</TableCell>
