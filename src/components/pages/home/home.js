@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import backgroundImage from "../../../assets/bgImage.jpg";
 import SearchBar from "../../searchBar/searchBar";
+import logo from "../../../assets/premier-league-logo.png";
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
           justifyContent: "center",
           flexDirection: "column",
           flexWrap: "wrap",
-          marginTop: "5rem",
+          marginTop: "3rem",
         }}
       >
         <Typography
@@ -38,6 +39,16 @@ const Home = () => {
           Premier League in one place
         </Typography>
       </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "2rem",
+          width: "60",
+        }}
+      >
+        <img src={logo} alt="Footy-Pals-Logo" height="auto" width="100rem" />
+      </Box>
 
       <Box
         style={{
@@ -45,6 +56,7 @@ const Home = () => {
           left: "50%",
           top: "50%",
           transform: "translate(-50%, -50%)",
+          marginTop: "4.5rem",
         }}
       >
         <SearchBar />
