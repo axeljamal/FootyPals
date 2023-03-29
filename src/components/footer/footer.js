@@ -3,6 +3,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
+import { Stack } from "@mui/material";
 
 const contributors = [
   { name: "Lee Dillon", link: "https://github.com/LeeDillon" },
@@ -40,18 +41,33 @@ export default function Footer() {
             justifyContent: "center",
             display: "flex",
             mb: 1,
+            fontSize: "1rem",
           }}
         >
           {contributors.map((contributor, index) => (
-            <Typography key={index} mr={3} variant="caption" color="initial">
-              <a target="_blank" rel="noopener noreferrer" href={contributor.link}>
+            <Typography key={index} mr={3} color="initial" fontSize={14}>
+              <a
+                style={{ textDecoration: "none", color: "#467336", fontWeight: "500" }}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={contributor.link}
+              >
                 {contributor.name}
               </a>
             </Typography>
           ))}
+        </Box>
 
-          <Typography variant="caption" color="initial">
-            Copyright ©2023.
+        <Box
+          sx={{
+            flexGrow: 1,
+            justifyContent: "center",
+            display: "flex",
+            mb: 1,
+          }}
+        >
+          <Typography color="initial" textAlign={"center"} fontSize={13}>
+            Copyright ©2023 | Footy Pals
           </Typography>
         </Box>
       </Container>
