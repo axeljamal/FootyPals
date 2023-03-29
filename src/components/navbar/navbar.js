@@ -70,10 +70,15 @@ function Navbar(props) {
         {navItems.map((item) => (
           <ListItem key={item.label} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <Link to={item.path} style={{ textDecoration: "none", color: "inherit" }}>
+              <Link
+                to={item.path}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
                 <ListItemText
                   primary={item.label}
-                  primaryTypographyProps={{ sx: { fontWeight: "500", textAlign: "center" } }}
+                  primaryTypographyProps={{
+                    sx: { fontWeight: "500", textAlign: "center" },
+                  }}
                 />
               </Link>
             </ListItemButton>
@@ -83,7 +88,8 @@ function Navbar(props) {
     </Box>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -121,7 +127,10 @@ function Navbar(props) {
                   textDecoration: "none",
                 }}
               >
-                <Link to="/" style={{ textDecoration: "none", color: "#467336" }}>
+                <Link
+                  to="/"
+                  style={{ textDecoration: "none", color: "#467336" }}
+                >
                   Footy Pals
                 </Link>
               </Typography>
@@ -148,7 +157,10 @@ function Navbar(props) {
           }}
           sx={{
             display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
           }}
         >
           {drawer}
