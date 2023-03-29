@@ -11,19 +11,12 @@ const Home = () => {
     <>
       {/* <Navbar /> */}
       <TeamsButtons />
-      <Box
-        sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-      >
-        <Typography variant="h3" sx={{ fontWeight: '500' }}>
+      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <Typography variant="h3" sx={{ fontWeight: "500" }}>
           Stay up-to-date with everything <br></br> Premier League in one place.
         </Typography>
       </Box>
-      <Box
-        sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-      >
-        <SearchBar />
-      </Box>
-
+      <SearchBar sx={{ display: "flex", alignItems: "center", justifyContent: "center" }} />
       <style>
         {`
           body {
