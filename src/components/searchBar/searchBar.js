@@ -5,19 +5,22 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Squads from "../squads/squads";
+import { useRef } from "react";
 
 export default function BasicSelect() {
   const [team, setTeam] = React.useState("");
+  const notInitialRender = useRef(false);
 
   const handleChange = (event: SelectChangeEvent) => {
     setTeam(event.target.value);
+    notInitialRender.current = true;
   };
 
   return (
     <div>
       <Box sx={{ Width: 60 }}>
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">
+        <FormControl sx={{ bgcolor: "white", borderRadius: "5px" }} fullWidth>
+          <InputLabel sx={{ fontColor: "dark" }} id="demo-simple-select-label">
             Select your team
           </InputLabel>
           <Select
@@ -50,9 +53,7 @@ export default function BasicSelect() {
           </Select>
         </FormControl>
       </Box>
-      <div>
-        <Squads team={team} />
-      </div>
+      <div>{notInitialRender.current ? <Squads team={team} /> : null}</div>
     </div>
   );
 }
