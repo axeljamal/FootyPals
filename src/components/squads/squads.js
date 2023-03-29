@@ -18,15 +18,26 @@ const Squads = (props) => {
     axios
       .request(options)
       .then(function (response) {
-        console.log(response.data);
-        setData(response.data);
+        console.log(response.data.response[0]);
+        setData(response.data.response[0]);
       })
       .catch(function (error) {
         console.error(error);
       });
   }, [props.team]);
 
-  return <div>squads{props.team}, </div>;
+  return (
+    <div>
+      <div>
+        {data?.map((item) => (
+          <div key={item.players.id}>
+            <img src={item.players.photo} alt="player" />
+          </div>
+        ))}
+      </div>
+      squads{props.team},{" "}
+    </div>
+  );
 };
 
 export default Squads;
