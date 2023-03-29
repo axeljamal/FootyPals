@@ -1,8 +1,15 @@
-import * as React from "react";
+import React from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
+
+const contributors = [
+  { name: "Lee Dillon", link: "https://github.com/LeeDillon" },
+  { name: "Murtaza Mohebi", link: "https://github.com/Murtaza34" },
+  { name: "Axel Jamal", link: "https://github.com/axeljamal" },
+  { name: "Helder Balbino", link: "https://github.com/HelderBalbino" },
+];
 
 export default function Footer() {
   return (
@@ -32,31 +39,16 @@ export default function Footer() {
             flexGrow: 1,
             justifyContent: "center",
             display: "flex",
-            mb: 0.1,
+            mb: 1,
           }}
         >
-          <Typography mr={3} variant="caption" color="initial">
-            <a target="blank" href="https://github.com/LeeDillon">
-              Lee Dillon
-            </a>
-          </Typography>
-          <Typography mr={3} variant="caption" color="initial">
-            <a target="blank" href="https://github.com/Murtaza34">
-              Murtaza Mohebi
-            </a>
-          </Typography>
-
-          <Typography mr={3} variant="caption" color="initial">
-            <a target="blank" href="https://github.com/axeljamal">
-              Axel Jamal
-            </a>
-          </Typography>
-
-          <Typography mr={3} variant="caption" color="initial">
-            <a target="blank" href="https://github.com/HelderBalbino">
-              Helder Balbino
-            </a>
-          </Typography>
+          {contributors.map((contributor, index) => (
+            <Typography key={index} mr={3} variant="caption" color="initial">
+              <a target="_blank" rel="noopener noreferrer" href={contributor.link}>
+                {contributor.name}
+              </a>
+            </Typography>
+          ))}
 
           <Typography variant="caption" color="initial">
             Copyright ©2023.
