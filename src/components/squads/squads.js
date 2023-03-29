@@ -8,7 +8,7 @@ const Squads = (props) => {
     const options = {
       method: "GET",
       url: "https://api-football-v1.p.rapidapi.com/v3/players/squads",
-      params: { team: { props } },
+      params: { team: `${props.team}` },
       headers: {
         "X-RapidAPI-Key": `${process.env.REACT_APP_FOOTBALL_KEY}`,
         "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
@@ -26,7 +26,7 @@ const Squads = (props) => {
       });
   }, []);
 
-  return <div>squads</div>;
+  return <div>squads{props.team}, </div>;
 };
 
 export default Squads;
