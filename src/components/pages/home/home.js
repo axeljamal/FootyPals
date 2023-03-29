@@ -1,10 +1,10 @@
-import React from "react";
-import Typography from "@mui/material/Typography";
+import React from 'react';
+import Typography from '@mui/material/Typography';
 // import Navbar from '../../navbar/navbar';
-import { Box } from "@mui/material";
-import backgroundImage from "../../../assets/bgImage.jpg";
-import TeamsButtons from "../../TeamsButtons/TeamsButtons";
-import SearchBar from "../../searchBar/searchBar";
+import { Box } from '@mui/material';
+import backgroundImage from '../../../assets/bgImage.jpg';
+import TeamsButtons from '../../TeamsButtons/TeamsButtons';
+import SearchBar from '../../searchBar/searchBar';
 
 const Home = () => {
   return (
