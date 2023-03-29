@@ -2,9 +2,9 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
+// import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import { Container } from "@mui/material";
+import { Container, Box, Typography } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
@@ -38,13 +38,29 @@ export default function Fixture() {
     borderSpacing: "0px 4px",
   };
 
+  const PlTableStyles = {
+    fontWeight: "500",
+    color: "#22577a",
+    padding: 5,
+  };
+
+  const containerStyles = {
+    margin: "20px 0px 100px 0px",
+  };
+
   return (
     <Container>
-      <TableContainer component={Paper}>
+      {/* ------------------ header ------------------ */}
+      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <Typography variant="h5" sx={PlTableStyles}>
+          Upcoming Fixtures
+        </Typography>
+      </Box>
+      <TableContainer component={Paper} sx={containerStyles}>
         <Table aria-label="simple table" stickyHeader>
           <TableBody>
             {data.map((item) => (
-              <TableRow key={item.teams.id} sx={{tableStyle}}>
+              <TableRow key={item.teams.id} sx={{ tableStyle }}>
                 <TableCell align="right">{item.teams.home.name}</TableCell>
                 <TableCell align="left">
                   <img src={item.teams.home.logo} width={36} alt="logo" />{" "}
