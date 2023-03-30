@@ -11,7 +11,7 @@
   padding-right: 200px !important;
 }
 
-.css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+.css-11xur9t-MuiPaper-root-MuiTableContainer-root, .css-13xy2my {
   overflow-y: scroll;
   max-height: 50vh;
 }

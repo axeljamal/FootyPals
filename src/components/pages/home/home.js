@@ -22,7 +22,7 @@ const Home = () => {
           variant="h3"
           sx={{
             fontWeight: "500",
-            fontSize: { xs: "1.5rem", md: "3rem", lg: "3.5rem" },
+            fontSize: { xs: "1.5rem", md: "2rem", lg: "2rem" },
             color: "grey",
           }}
         >
@@ -32,7 +32,7 @@ const Home = () => {
           variant="h3"
           sx={{
             fontWeight: "500",
-            fontSize: { xs: "1.5rem", md: "3rem", lg: "3.5rem" },
+            fontSize: { xs: "1.5rem", md: "2rem", lg: "2rem" },
             color: "grey",
           }}
         >
@@ -56,7 +56,7 @@ const Home = () => {
           left: "50%",
           top: "40%",
           transform: "translate(-50%, -50%)",
-          marginTop: "9rem",
+          marginTop: "8rem",
         }}
       >
         <SearchBar />
