@@ -26,10 +26,8 @@
   
   
   ## Demo
-  
-  
-  https://user-images.githubusercontent.com/119621308/228814116-0b4505d9-4934-4a04-84b5-da0a4e7f66b7.mp4
 
+  https://user-images.githubusercontent.com/119621308/228900892-c345d976-d80f-4cfa-b63a-04cb429f1b2b.mp4
 
 
   ## Installation
