@@ -15,7 +15,7 @@ const Home = () => {
           justifyContent: "center",
           flexDirection: "column",
           flexWrap: "wrap",
-          marginTop: "3rem",
+          marginTop: "0.2rem",
         }}
       >
         <Typography
@@ -43,7 +43,7 @@ const Home = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          marginTop: "2rem",
+          marginTop: "1rem",
           width: "60",
         }}
       >
@@ -56,7 +56,7 @@ const Home = () => {
           left: "50%",
           top: "40%",
           transform: "translate(-50%, -50%)",
-          marginTop: "4.5rem",
+          marginTop: "9rem",
         }}
       >
         <SearchBar />
