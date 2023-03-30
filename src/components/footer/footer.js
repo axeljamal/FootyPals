@@ -46,7 +46,11 @@ export default function Footer() {
           {contributors.map((contributor, index) => (
             <Typography key={index} mr={3} color="initial" fontSize={14}>
               <a
-                style={{ textDecoration: "none", color: "#467336", fontWeight: "500" }}
+                style={{
+                  textDecoration: "none",
+                  color: "#467336",
+                  fontWeight: "500",
+                }}
                 target="_blank"
                 rel="noopener noreferrer"
                 href={contributor.link}
